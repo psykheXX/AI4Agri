@@ -1,0 +1,36 @@
+{
+  "paths": {
+    "data_root": "/root/autodl-tmp/train_240/",
+    "val_root": "/root/autodl-tmp/test_240/",      
+    "stats_path": "dataset_240_stats.npy",
+    "checkpoint_dir": "./checkpoints_240/"
+  },
+  "train": {
+    "batch_size": 512,
+    "total_iters": 20000,
+    "epochs":10,
+    "val_interval": 1000,
+    "learning_rate": 1e-4,
+    "eta_min":1e-6,
+    "weight_decay": 1e-4,
+    "warmup_iters": 1000,
+    "num_workers": 8
+  },
+  "model": {
+    "seq_len": 240,
+    "patch_len":64,
+    "stride": 64,
+    "d_model": 512,
+    "d_ff": 2048,
+    "n_heads": 8,
+    "e_layers": 4,
+    "dropout": 0.1,
+    "activation": "gelu",
+    "output_attention": false,
+    "factor": 1
+  },
+  "swanlab":{
+    "project_name":"SpecITransformer",
+    "workspace":"psykhexx"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "paths": {
+    "data_root": "/root/autodl-tmp/train/",
+    "val_root": "/root/autodl-tmp/val/",      
+    "stats_path": "dataset_stats.npy",
+    "checkpoint_dir": "./checkpoints/"
+  },
+  "train": {
+    "batch_size": 128,
+    "total_iters": 50000,
+    "val_interval": 1000,
+    "learning_rate": 1e-4,
+    "weight_decay": 1e-4,
+    "warmup_iters": 1000,
+    "num_workers": 8
+  },
+  "model": {
+    "seq_len": 2101,
+    "patch_len": 32,
+    "stride": 32,
+    "d_model": 256,
+    "d_ff": 512,
+    "n_heads": 8,
+    "e_layers": 3,
+    "dropout": 0.1,
+    "activation": "gelu",
+    "output_attention": false,
+    "factor": 1
+  }
+}
